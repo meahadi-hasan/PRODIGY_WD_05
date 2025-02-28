@@ -89,49 +89,121 @@ button:hover {
     color: red;
 }
 
-/* CSS for mobile devices */
-@media (max-width: 480px) {
+/* Mobile Responsive Styles */
+@media only screen and (max-width: 768px) {
     body {
-        padding: 10px; 
+        padding: 15px;
+        height: auto;
+        min-height: 100dvh;
+        overflow-x: hidden;
+        -webkit-tap-highlight-color: transparent;
     }
 
     .container {
-        padding: 15px; 
-        max-width: 100%; 
-        margin: 0; 
+        padding: 18px;
+        max-width: 100%;
+        width: 92%;
+        margin: 15px auto;
+        border-radius: 12px;
     }
 
     h1 {
-        font-size: 1.8em; 
+        font-size: 1.8em;
+        margin-bottom: 1.2rem;
+        line-height: 1.3;
+    }
+
+    form {
+        margin-bottom: 1.5rem;
     }
 
     input {
-        padding: 10px; 
-        font-size: 0.9em; 
+        padding: 12px 15px;
+        font-size: 0.95em;
+        margin-bottom: 12px;
+        border-radius: 8px;
+        width: 100%;
+        box-sizing: border-box;
     }
 
     button {
-        padding: 10px 15px; 
-        font-size: 0.9em; 
+        padding: 13px 0;
+        font-size: 1em;
+        border-radius: 8px;
+        width: 100%;
+        transition: transform 0.2s ease;
+    }
+
+    button:active {
+        transform: scale(0.98);
+    }
+
+    #weatherDisplay {
+        margin-top: 1.5rem;
     }
 
     #weatherDisplay h2 {
-        font-size: 1.3em; 
+        font-size: 1.6em;
+        margin-bottom: 0.8rem;
+        word-break: break-word;
     }
 
     #weatherDisplay p {
-        font-size: 0.9em; 
+        font-size: 1.05em;
+        margin: 0.8rem 0;
+        line-height: 1.4;
     }
 
     #weatherDisplay p#temperature {
-        font-size: 1.1em; 
+        font-size: 1.8em;
+        margin: 1.2rem 0;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .container {
+        padding: 15px;
+        width: 94%;
     }
 
-    #weatherDisplay p#humidity, #weatherDisplay p#windSpeed {
-        font-size: 0.9em; 
+    h1 {
+        font-size: 1.7em;
     }
 
-    #errorMessage {
-        font-size: 0.9em; 
+    input {
+        font-size: 0.92em;
+        padding: 11px 14px;
+    }
+
+    #weatherDisplay h2 {
+        font-size: 1.5em;
+    }
+
+    #weatherDisplay p {
+        font-size: 1em;
+    }
+
+    #weatherDisplay p#temperature {
+        font-size: 1.6em;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    body {
+        padding: 12px;
+    }
+
+    .container {
+        padding: 14px;
+        width: 96%;
+    }
+
+    h1 {
+        font-size: 1.6em;
+    }
+
+    button {
+        padding: 12px 0;
+        font-size: 0.95em;
     }
 }
